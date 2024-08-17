@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+
+            /* linear-gradient() bikin jadi ada gradiennya */
+            background-image: linear-gradient(to bottom right, rgb(186, 255, 255), rgb(237, 255, 212));
+
+
+            /* POSITION */
+            position: absolute;
+        }
+
+        .container {
+            /* POSITION */
+            position: relative;
+        }
+
+        .taskList {
+            width: max-content;
+            height: max-content;
+
+            /* Mengatur box-sizing */
+            box-sizing: content-box;
+
+            border-radius: 16px;
+            padding: 32px;
+
+            background-color: antiquewhite;
+
+            /* Bikin ada shadownya */
+            box-shadow: -4px -4px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .taskList h1 {
+            margin-bottom: 8px;
+        }
+
+        .taskList2 {
+            /* POSITION */
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="taskList">
+            <h1>Task List</h1>
+            <ul>
+                <li>Kerjain display flex</li>
+                <li>Kerjain ini</li>
+                <li>PAS janlup</li>
+            </ul>
+        </div>
+        <div class="taskList taskList2">
+            <h1>Task List</h1>
+            <ul>
+                <li>Kerjain display flex</li>
+                <li>Kerjain ini</li>
+                <li>PAS janlup</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

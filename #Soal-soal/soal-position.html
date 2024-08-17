@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Soal</title>
+</head>
+<body>
+    <section>
+        <h1>position: absolute</h1>
+        <p>Properti untuk mengatur posisi suatu elemen. <a href="https://www.w3schools.com/css/css_positioning.asp">resource</a> <br> Berikut contohnya :</p>
+    </section>
+    <section class="html">
+        <div style="display: block; justify-content: center; align-items: flex-start; background-color: lightblue; width: 100%; height: 450px; overflow: scroll; position: relative;">
+            <div style="width: 300px; height: 100px; background-color: lightcoral; border: solid black 3px; position: absolute; bottom: 0px;  right: 0px; z-index: 5;"><b>absolute:</b> Tetap, relatif terhadap parent</div>
+            <div style="width: 300px; height: 100px; background-color: lightcoral; border: solid black 3px; position: absolute; bottom: 90px; right: 0px; z-index: 5;"><b>absolute:</b> Tetap, relatif terhadap parent</div>
+            <div style="width: 300px; height: 100px; background-color: yellowgreen; border: solid black 3px; position: relative;"><b>relative:</b> relatif terhadap tempat awal diposisikan</div>
+            <div style="width: 300px; height: 100px; background-color: yellowgreen; border: solid black 3px; position: relative;"><b>relative:</b> relatif terhadap tempat awal diposisikan</div>
+            <div style="width: 300px; height: 100px; background-color: gold; border: solid black 3px; position: sticky; top: 0px;"><b>sticky:</b> awalnya relatif jadi fixed </div>
+            <div style="width: 300px; height: 100px; background-color: yellowgreen; border: solid black 3px; position: static;"><b>static:</b> mirip relatif </div>
+            <div style="width: 300px; height: 100px; background-color: orange; border: solid black 3px; position: fixed; top: 200px; right: 0px;"><b>fixed:</b> relatif terhadap viewport</div>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+
+        </div>
+    </section>
+    <section>
+        <h1>Sifat-sifat:</h1>
+        <h2>Umum</h2>
+        <ul>
+            <li>Untuk mengatur posisi menggunakan ( <code>top,right,bottom,left</code> )
+            <br> Contoh: 
+            <code>
+                position: relative;
+                top: 30px;
+                left: 100px;
+            </code>
+        </li>
+        <li>Properti tidak boleh kontradiksi || <code>left</code> != <code>right</code> & <code>bottom</code> != <code>top</code> <br> 
+        Contoh: <br>
+        <code>
+            top: 10px;
+            bottom: 10px
+        </code>
+        <br> atau <br>
+        <code>
+            left: 10px;
+            right: 10px
+        </code>
+        </li>
+        </ul>
+        <br>
+        <h2>Absolute</h2>
+        <ul>
+            <li><b>Posisi tetap, dalam artian tidak dapat "tergeser" / "terdorong" oleh elemen lain (bisa numpuk)</b> <span style="color: red">*</span>lihat contoh</li>
+            <li>Tidak dapat menggunakan margin</li>
+            <li>Posisi relatif terhadap parent</li>
+            <li>Parent harus memiliki posisi <a href="https://dev.to/domagojvidovic/position-absolute-and-relative-the-simplest-guide-5169#:~:text=Whenever%20you%20set%20position%3A%20absolute,position%20itself%20relative%20to%20it.">resource</a></li>
+            <li>Dapat digunakan untuk meng-<i>center</i>-kan <code>&lt;div&gt;</code></li>
+        </ul>
+        <br>
+        <h2>Fixed</h2>
+        <ul>
+            <li>relatif terhadap viewport (POV user)</li>
+        </ul>
+        <br>
+        <h2>Static</h2>
+        <ul>
+            <li>properti ( <code>top,right,bottom,left</code> ) tidak dapat bekerja</li>
+        </ul>
+        <br>
+        <h2>Sticky</h2>
+        <ul>
+            <li>Awalnya <code>relative</code> kalo udh nyampe posisi scrollnya <b>(relatif parent bukan viewport)</b> bakal jadi <code>fixed</code></li>
+            <li>Jarang dipake (opinion)</li>
+        </ul>
+        <br>
+    </section>
+    <section>
+        <h1>Soal</h1>
+        <p>Buatlah html di bawah ini:</p>
+    </section>
+    <section class="html">
+        <style>
+            .theSuperDuperContainer * {
+                margin: 0px;
+                padding: 0px;
+                font-family: sans-serif;
+            }
+
+            .theSuperDuperContainer {
+                width: 100%;
+                height: 400px;
+                position: relative;
+            }
+
+            .background {
+                width: 100%;
+                height: 100%;
+
+                /* linear-gradient() bikin jadi ada gradiennya */
+                background-image: linear-gradient(to bottom right, rgb(186, 255, 255), rgb(237, 255, 212));
+
+
+                /* POSITION */
+                position: absolute;
+            }
+
+            .container {
+                /* POSITION */
+                position: relative;
+            }
+
+            .taskList {
+                width: max-content;
+                height: max-content;
+
+                /* Mengatur box-sizing */
+                box-sizing: content-box;
+
+                border-radius: 16px;
+                padding: 32px;
+
+                background-color: antiquewhite;
+
+                /* Bikin ada shadownya */
+                box-shadow: -4px -4px 2px rgba(0, 0, 0, 0.25);
+            }
+
+            .taskList h1 {
+                margin-bottom: 8px;
+            }
+
+            .taskList2 {
+                /* POSITION */
+                position: absolute;
+                left: 50px;
+                top: 50px;
+            }
+        </style>
+        <div class="theSuperDuperContainer">
+            <div class="background"></div>
+            <div class="container">
+                <div class="taskList">
+                    <h1>Task List</h1>
+                    <ul>
+                        <li>Kerjain display flex</li>
+                        <li>Kerjain ini</li>
+                        <li>PAS janlup</li>
+                    </ul>
+                </div>
+                <div class="taskList taskList2">
+                    <h1>Task List</h1>
+                    <ul>
+                        <li>Kerjain display flex</li>
+                        <li>Kerjain ini</li>
+                        <li>PAS janlup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p>Gunakan html di bawah ini sebagai landasan, lalu tambahkan sebagian properti di bawah ini:</p>
+        <p>Properti</p>
+        <ul>
+            <li><code>top</code></li>
+            <li><code>right</code></li>
+            <li><code>bottom</code></li>
+            <li><code>left</code></li>
+            <li><code>position</code></li>
+        </ul>
+        <br>
+        <p>Code</p>
+        <code class="independent">
+            <span>&lt;!DOCTYPE html&gt;</span>
+            <span>&lt;html lang="en"&gt;</span>
+            <span>&lt;head&gt;</span>
+            <span>    &lt;meta charset="UTF-8"&gt;</span>
+            <span>    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span>
+            <span>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>
+            <span>    &lt;title&gt;Position Absolute&lt;/title&gt;</span>
+            <span>    &lt;style&gt;</span>
+            <span>        * {</span>
+            <span>            margin: 0px;</span>
+            <span>            padding: 0px;</span>
+            <span>            font-family: sans-serif;</span>
+            <span>        }</span>
+            <span></span>
+            <span>        body, html {</span>
+            <span>            width: 100%;</span>
+            <span>            height: 100%;</span>
+            <span>        }</span>
+            <span></span>
+            <span>        .taskList {</span>
+            <span>            width: max-content;</span>
+            <span>            height: max-content;</span>
+            <span></span>
+            <span>            /* Mengatur box-sizing */</span>
+            <span>            box-sizing: content-box;</span>
+            <span></span>
+            <span>            border-radius: 16px;</span>
+            <span>            padding: 32px;</span>
+            <span>            background-color: antiquewhite;</span>
+            <span></span>
+            <span>            /* Bikin ada shadownya */</span>
+            <span>            box-shadow: -4pxm -4pxm 2px rgba(0, 0, 0, 0.25);</span>
+            <span>        }</span>
+            <span>        </span>
+            <span>        .taskList h1 {</span>
+            <span>            margin-bottom: 8px;</span>
+            <span>        }</span>
+            <span></span>
+            <span></span>
+            <span>        /* ------------- ADD PROPERTY ------------- */</span>
+            <span></span>
+            <span>        .background {</span>
+            <span>            width: 100%;</span>
+            <span>            height: 100%;</span>
+            <span></span>
+            <span>            /* linear-gradient() bikin jadi ada gradiennya */</span>
+            <span>            background-image: linear-gradient(to bottom right, rgb(186, 255, 255), rgb(237, 255, 212));</span>
+            <span></span>
+            <span></span>
+            <span>            /* POSITION */</span>
+            <span>            /* ... */</span>
+            <span>        }</span>
+            <span></span>
+            <span>        .container {</span>
+            <span>            /* POSITION */</span>
+            <span>            /* ... */</span>
+            <span>        }</span>
+            <span></span>
+            <span>        .taskList2 {</span>
+            <span>            /* POSITION */</span>
+            <span>            /* ... */</span>
+            <span>        }</span>
+            <span></span>
+            <span></span>
+            <span>    &lt;/style&gt;</span>
+            <span>&lt;/head&gt;</span>
+            <span>&lt;body&gt;</span>
+            <span>    &lt;div class="background"&gt;&lt;/div&gt;</span>
+            <span>    &lt;div class="container"&gt;</span>
+            <span>        &lt;div class="taskList"&gt;</span>
+            <span>            &lt;h1&gt;Task List&lt;/h1&gt;</span>
+            <span>            &lt;ul&gt;</span>
+            <span>                &lt;li&gt;Kerjain display flex&lt;/li&gt;</span>
+            <span>                &lt;li&gt;Kerjain ini&lt;/li&gt;</span>
+            <span>                &lt;li&gt;PAS janlup&lt;/li&gt;</span>
+            <span>            &lt;/ul&gt;</span>
+            <span>        &lt;/div&gt;</span>
+            <span>        &lt;div class="taskList taskList2"&gt;</span>
+            <span>            &lt;h1&gt;Task List&lt;/h1&gt;</span>
+            <span>            &lt;ul&gt;</span>
+            <span>                &lt;li&gt;Kerjain display flex&lt;/li&gt;</span>
+            <span>                &lt;li&gt;Kerjain ini&lt;/li&gt;</span>
+            <span>                &lt;li&gt;PAS janlup&lt;/li&gt;</span>
+            <span>            &lt;/ul&gt;</span>
+            <span>        &lt;/div&gt;</span>
+            <span>    &lt;/div&gt;</span>
+            <span>&lt;/body&gt;</span>
+            <span>&lt;/html&gt;</span>
+        </code>
+    </section>
+    <section>
+        <p><b>Untuk <i>class</i> <code>taskList2</code>. Posisi kiri dan atas elemen berjarak | <code>50px</code> | dari ujung kiri atas</b></p>
+    </section>
+</body>
+</html>

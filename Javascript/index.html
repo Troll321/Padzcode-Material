@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSimp</title>
+    <style>
+        * {
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+            font-size: 1em;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #kotak {
+            font-size: 10px;
+            width: 5em;
+            aspect-ratio: 1;
+            background-color: aquamarine;
+            border: solid black 1em;
+            transition-property: top, left;
+            transition-duration: 200ms;
+            /* transition-timing-function: linear; */
+        }
+    </style>
+</head>
+<body>
+    <div style="top: 0px; left: 0px;" id="kotak"></div>
+    <script>
+        const VEL = 100;
+        const GRID = { 
+            N: parseInt(window.innerHeight),
+            M: parseInt(window.innerWidth)
+        };
+        const WIDTH = 25;
+        const kotak = document.getElementById("kotak");
+
+        window.addEventListener("keydown", e => {
+            console.log(e.key);
+            switch(e.key) {
+                case "ArrowUp":
+                    kotak.style.top = (parseFloat(kotak.style.top) - VEL) + "px";
+                    break ;
+                case "ArrowDown":
+                    kotak.style.top = (parseFloat(kotak.style.top) + VEL) + "px";
+                    break ;
+                case "ArrowLeft":
+                    kotak.style.left = (parseFloat(kotak.style.left) - VEL) + "px";
+                    break ;
+                case "ArrowRight":
+                    kotak.style.left = (parseFloat(kotak.style.left) + VEL) + "px";
+                    break ;
+            }
+
+            if(parseFloat(kotak.style.top) < 0) {
+                kotak.style.top = (parseFloat(kotak.style.top) + 2*VEL) + "px";
+            } else if(parseFloat(kotak.style.top) + WIDTH > GRID.N) {
+                kotak.style.top = (parseFloat(kotak.style.top) - 2*VEL) + "px";
+            }
+
+            if(parseFloat(kotak.style.left) < 0) {
+                kotak.style.left = (parseFloat(kotak.style.left) + 2*VEL) + "px";
+            } else if(parseFloat(kotak.style.left) +WIDTH > GRID.M) {
+                kotak.style.left = (parseFloat(kotak.style.left) - 2*VEL) + "px";
+            }
+        });
+    </script>
+</body>
+</html>

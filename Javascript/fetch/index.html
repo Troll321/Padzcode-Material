@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:3000/suggestions" method="post">
+        <input name="content" type="text">
+        <button type="submit">Submit</button>
+    </form>
+    <a href="http://localhost:3000/suggestions">See Suggestions</a>
+
+    <h1>Siswa</h1>
+    <div id="siswa"></div>
+    <hr>
+    <h1>Guru</h1>
+    <div id="guru"></div>
+    <script>
+        const guruE = document.getElementById("guru");
+        const siswaE = document.getElementById("siswa");
+        
+        // XHR
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:3000/siswa/all");
+        xhr.onload = () => {
+            siswaE.innerText = format(xhr.response);
+        }
+        xhr.send();
+
+        // FETCH
+        fetch("http://localhost:3000/guru/all").then(res => {
+            res.json().then(json => {
+                guruE.innerText = format(JSON.stringify(json));
+            });
+        });
+
+        // FETCH ASYNC
+        async function makereq() {
+            const response = await fetch("http://localhost:3000/guru/all");
+            const json = await response.json();
+            guruE.innerText = format(JSON.stringify(json));
+        }
+        makereq();
+
+        
+        function format(inp) {
+            console.log(inp);
+            return inp.split("{").join("").split("[").join("").split("},").join("\n").split("}]").join("").split("\"").join("").split(",").join(" | ").split(":").join(": ");
+        }
+    </script>
+</body>
+</html>

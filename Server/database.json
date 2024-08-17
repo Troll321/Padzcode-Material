@@ -1,0 +1,67 @@
+{
+    "suggestions": ["Testing"],
+    "siswa": [
+        {
+            "absen": 1,
+            "nama": "Andi",
+            "hobi": "Maen Game",
+            "usia": 18
+        },
+        {
+            "absen": 2,
+            "nama": "Budi",
+            "hobi": "Liat Gamelan",
+            "usia": 17
+        },
+        {
+            "absen": 3,
+            "nama": "Cici",
+            "hobi": "Muter Yoyo",
+            "usia": 18
+        },
+        {
+            "absen": 4,
+            "nama": "Dani",
+            "hobi": "Membuat Game",
+            "usia": 16
+        },
+        {
+            "absen": 5,
+            "nama": "Endah",
+            "hobi": "Nonton Anime",
+            "usia": 19
+        }
+    ],
+    "guru": [
+        {
+            "absen": 1,
+            "nama": "Pak Lukito",
+            "hobi": "Maen Game",
+            "usia": 21
+        },
+        {
+            "absen": 2,
+            "nama": "Pak Yanto",
+            "hobi": "Maen sama Pak Lukito",
+            "usia": 21
+        },
+        {
+            "absen": 3,
+            "nama": "Bu Dani",
+            "hobi": "Makan di Kantin",
+            "usia": 23
+        },
+        {
+            "absen": 4,
+            "nama": "Bu Sinta",
+            "hobi": "Ngobrol sama Bu Dani",
+            "usia": 20
+        },
+        {
+            "absen": 5,
+            "nama": "Bu Mega",
+            "hobi": "Nonton Anime",
+            "usia": 30
+        }
+    ]
+}

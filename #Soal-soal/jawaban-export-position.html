@@ -1,0 +1,88 @@
+<span>&lt;!DOCTYPE html&gt;</span>
+<span>&lt;html lang="en"&gt;</span>
+<span>&lt;head&gt;</span>
+<span>    &lt;meta charset="UTF-8"&gt;</span>
+<span>    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span>
+<span>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>
+<span>    &lt;title&gt;Position Absolute&lt;/title&gt;</span>
+<span>    &lt;style&gt;</span>
+<span>        * {</span>
+<span>            margin: 0px;</span>
+<span>            padding: 0px;</span>
+<span>            font-family: sans-serif;</span>
+<span>        }</span>
+<span></span>
+<span>        body, html {</span>
+<span>            width: 100%;</span>
+<span>            height: 100%;</span>
+<span>        }</span>
+<span></span>
+<span>        .taskList {</span>
+<span>            width: max-content;</span>
+<span>            height: max-content;</span>
+<span></span>
+<span>            /* Mengatur box-sizing */</span>
+<span>            box-sizing: content-box;</span>
+<span></span>
+<span>            border-radius: 16px;</span>
+<span>            padding: 32px;</span>
+<span>            background-color: antiquewhite;</span>
+<span></span>
+<span>            /* Bikin ada shadownya */</span>
+<span>            box-shadow: -4px -4px 2px rgba(0, 0, 0, 0.25);</span>
+<span>        }</span>
+<span>        </span>
+<span>        .taskList h1 {</span>
+<span>            margin-bottom: 8px;</span>
+<span>        }</span>
+<span></span>
+<span></span>
+<span>        /* ------------- ADD PROPERTY ------------- */</span>
+<span></span>
+<span>        .background {</span>
+<span>            width: 100%;</span>
+<span>            height: 100%;</span>
+<span></span>
+<span>            /* linear-gradient() bikin jadi ada gradiennya */</span>
+<span>            background-image: linear-gradient(to bottom right, rgb(186, 255, 255), rgb(237, 255, 212));</span>
+<span></span>
+<span></span>
+<span>            /* POSITION */</span>
+<span>            /* ... */</span>
+<span>        }</span>
+<span></span>
+<span>        .container {</span>
+<span>            /* POSITION */</span>
+<span>            /* ... */</span>
+<span>        }</span>
+<span></span>
+<span>        .taskList2 {</span>
+<span>            /* POSITION */</span>
+<span>            /* ... */</span>
+<span>        }</span>
+<span></span>
+<span></span>
+<span>    &lt;/style&gt;</span>
+<span>&lt;/head&gt;</span>
+<span>&lt;body&gt;</span>
+<span>    &lt;div class="background"&gt;&lt;/div&gt;</span>
+<span>    &lt;div class="container"&gt;</span>
+<span>        &lt;div class="taskList"&gt;</span>
+<span>            &lt;h1&gt;Task List&lt;/h1&gt;</span>
+<span>            &lt;ul&gt;</span>
+<span>                &lt;li&gt;Kerjain display flex&lt;/li&gt;</span>
+<span>                &lt;li&gt;Kerjain ini&lt;/li&gt;</span>
+<span>                &lt;li&gt;PAS janlup&lt;/li&gt;</span>
+<span>            &lt;/ul&gt;</span>
+<span>        &lt;/div&gt;</span>
+<span>        &lt;div class="taskList taskList2"&gt;</span>
+<span>            &lt;h1&gt;Task List&lt;/h1&gt;</span>
+<span>            &lt;ul&gt;</span>
+<span>                &lt;li&gt;Kerjain display flex&lt;/li&gt;</span>
+<span>                &lt;li&gt;Kerjain ini&lt;/li&gt;</span>
+<span>                &lt;li&gt;PAS janlup&lt;/li&gt;</span>
+<span>            &lt;/ul&gt;</span>
+<span>        &lt;/div&gt;</span>
+<span>    &lt;/div&gt;</span>
+<span>&lt;/body&gt;</span>
+<span>&lt;/html&gt;</span>
